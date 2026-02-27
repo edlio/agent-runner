@@ -1,0 +1,13 @@
+{
+  "name": "@edlio/agent-runner",
+  "version": "0.1.0",
+  "description": "Lightweight CLI wrapper for Claude Agent SDK with session resume support",
+  "type": "module",
+  "bin": {
+    "agent-runner": "./run.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/claude-agent-sdk": "^0.1.0"
+  },
+  "license": "MIT"
+}

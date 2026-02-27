@@ -4,7 +4,7 @@ Lightweight CLI wrapper for the [Claude Agent SDK](https://platform.claude.com/d
 
 ## Why
 
-We built this for our AI employee ([Arix](https://github.com/oguzbilgic/arix-workspace)) who runs on [OpenClaw](https://openclaw.ai) and codes in a GitHub Codespace via SSH. The old approach — piping prompts to `claude-code --print` over SSH — was fragile: stdout buffering, PTY hangs, no structured output, and no way to have multi-turn conversations.
+We built this for an AI agent that codes in a GitHub Codespace via SSH. The old approach — piping prompts to `claude-code --print` over SSH — was fragile: stdout buffering, PTY hangs, no structured output, and no way to have multi-turn conversations.
 
 This wrapper gives us:
 - **Structured output** instead of raw stdout

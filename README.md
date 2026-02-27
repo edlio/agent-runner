@@ -2,7 +2,17 @@
 
 Lightweight CLI wrapper for the [Claude Agent SDK](https://platform.claude.com/docs/en/agent-sdk/overview) with session resume support.
 
-Run coding tasks from the command line with structured output and multi-turn conversations.
+## Why
+
+We built this for our AI employee ([Arix](https://github.com/oguzbilgic/arix-workspace)) who runs on [OpenClaw](https://openclaw.ai) and codes in a GitHub Codespace via SSH. The old approach — piping prompts to `claude-code --print` over SSH — was fragile: stdout buffering, PTY hangs, no structured output, and no way to have multi-turn conversations.
+
+This wrapper gives us:
+- **Structured output** instead of raw stdout
+- **Session resume** for multi-turn coding (read code → review → implement → fix)
+- **Reliability** — no hanging, no buffering, no PTY hacks
+- **Simple CLI** that an AI agent can invoke via `exec` over SSH
+
+The typical flow: AI agent SSHs into a Codespace, runs `agent-runner "implement feature X"`, gets structured results + a session ID, then resumes with `agent-runner "fix the issue on line 42" SESSION_ID`.
 
 ## Install
 
